@@ -188,9 +188,6 @@
    
 }
 
-
-
-
 /* CSS CATEGORIAS*/
 
 *{
@@ -199,19 +196,62 @@
     box-sizing: border-box;
 }
 
+.contenedor-categoria{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px 80px 450px 80px 80px;
+   
+}
+
+nav{
+    grid-column: 1/5;
+    grid-row: 1/2;
+
+}
+header{
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+main{
+    grid-column: 1/5;
+    grid-row: 3/4;
+}
+aside{
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+footer{
+    grid-column: 1/5;
+    grid-row: 5/6;
+}
+.header-categoria h3{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(3, 58, 131);
+}
+
+.lista-categoria{
+    display: flex;
+    list-style: none;
+    background-color: skyblue;
+    height: 80px;
+    align-items: center;
+    justify-content:space-between
+
+}
+
 .icono2 {
     width: 200px;
-    height: 100px;
-    margin-right: 500px;
+    height: 80px;
+
 }
 
 .navbar2{
     display: flex;
-    justify-content: end;
-    list-style: none;
     background-color: skyblue;
-    height: 80px;
-
+    justify-content:space-between
 }
 
 .navbar2 li a{
@@ -219,8 +259,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(3, 58, 131);
     list-style: none;
-    margin-left: 5px;
-    padding-left: 25px;
+    margin-right: 10px;
 }
 
 .navbar2 li:hover{
@@ -231,30 +270,48 @@
     border-radius: 20%;
 }
 
-
-.img{
-    padding-left: 40px;
-    height: 300px;
-    width: 100px;
-    margin-top: 15px;
-
+.header-categoria{
+    padding: 20px;
 }
 
-.imagenes{
-    display:flex;
-    height: 440px;
-    width: 150px;
 
+.picture{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(1,1fr);
+    margin: 10px 10px 10px 30px;
 }
+
+.picture img{
+    object-fit: cover;
+    justify-items: center;
+   
+}
+
+.picture img:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/2;
+    object-fit: cover;
+   
+}
+.picture img:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/2;
+   
+}
+.picture img:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 1/2;
+   
+}
+
 
 .botones{
     height: 100px;
     width: 110px;
-    display: block;
-    position: relative;
     right: 80px;
     padding: 5px;
-
+    object-fit: cover;
 }
 
 .btn{
@@ -262,6 +319,10 @@
     width: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(3, 58, 131);
+    margin: 5px;
+    margin-left: 15px;
+    object-fit: cover;
+
 }
 .btn2{
    height: 50px;
@@ -270,9 +331,19 @@
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    color: white;
    background-color: rgb(3, 58, 131);
-   margin: 10px;
-   position: relative;
-   right: 40px;
+   object-fit: cover;
+
+}
+
+.aside-categoria{
+    margin-top: 10px;
+    object-fit: cover;
+    display: flex;
+}
+
+.footer-categoria{
+    margin-top: 10px;
+    display: flex;
 }
 
 
@@ -290,8 +361,6 @@
     height: 100px;
     margin-right: 500px;
 }
-
-
 
 .lanzamiento{
     display:flex;
@@ -315,8 +384,6 @@
     height: 350px;
     width: 1300px;
 }
-
-
 
 .slider3{
     height: 400px;
@@ -404,8 +471,7 @@
     color: rgb(3, 58, 131);
     font-size: 20px;
     display: block;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 
 .video{
@@ -448,14 +514,11 @@
    
 }
 
-
-
 .aside{
     display: flex;
     width: 100px;
     height: 100px;
 }
-
 
 .aside-uno{
     display: flex;
@@ -477,7 +540,6 @@
     width: 50px;
     height: 50px;
     margin-left: 30px;
- 
 }
 
 .telefono{
@@ -505,8 +567,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(3, 58, 131);
     font-size: 25px;
-    text-decoration: underline;
-    
+    text-decoration: underline;   
 }
 
 .map{
@@ -519,7 +580,6 @@
     display: flex;
     width: 500px;
     height: 100px;
- 
 }
 
 .cuerpo{
@@ -537,8 +597,7 @@
     color: white;
     background-color: black;
     font-size: 20px;
-    display: flex;
-   
+    display: flex; 
 }
 
 .boton-foot{
@@ -549,8 +608,7 @@
     height: 30px;
     width: 200px;
   margin: 0px 0px 0px 50px;
-
-    
+   
 }
 
 .registro{
@@ -573,8 +631,6 @@ justify-content: space-between;
     width: 100px;
    margin: 5px 0px 5px 50px;
    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-
 }
 
 
