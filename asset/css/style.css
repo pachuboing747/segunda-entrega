@@ -26,17 +26,14 @@
   
 }
 
-
 .navbar-nav{
     grid-area: nav;
     width:100%;
     display: flex;
-   justify-content: flex-end;
+    justify-content: flex-end;
     background-color: white rgb(3, 58, 131);
  
 }
-
-
 
 .navbar > ul{
     list-style: none;
@@ -293,9 +290,6 @@
 }
 
 
-
-
-
 @keyframes animacion {
     0% {
       box-shadow: 0 0 0 0 rgba(52, 55, 56, 0.6),  0 0 0 0 rgba(52, 55, 56, 0.6);
@@ -323,40 +317,26 @@
     box-sizing: border-box;
 }
 
-.contenedor-categoria{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 80px 80px 450px 80px 80px;
-   
-}
-
 nav{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 1/2;
 
 }
 header{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 2/3;
 }
 main{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 3/4;
 }
 aside{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 4/5;
 }
 footer{
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 5/6;
-}
-.header-categoria h3{
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(3, 58, 131);
 }
 
 .lista-categoria{
@@ -476,20 +456,22 @@ footer{
 
 /* CSS LANZAMIENTOS*/
 
-
-*{
+.contenedor-lanzamiento{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 80px 80px 400px 1fr 1fr;
+    background-image: linear-gradient(white, rgb(3, 58, 131));
+    grid-template-areas: "nav     nav    nav    nav"
+                        "header header header header"
+                        "main    main   main   main" 
+                        "aside   aside  aside  aside"
+                        "footer footer footer footer";  
 }
 
-.icono3{
-    width: 200px;
-    height: 100px;
-    margin-right: 500px;
-}
 
 .lanzamiento{
+    padding: 10px;
     display:flex;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -497,85 +479,60 @@ footer{
     justify-content: center;
     margin-bottom: 20px;
     text-decoration: underline;
-
 }
-
-
-.img3{
-    width: max-content;
-    height: max-content;
+.carousel-control-prev span{
+background-color:  rgb(3, 58, 131);;
 }
-
-.imagenes3{
-    display: flex;
-    height: 350px;
-    width: 1300px;
-}
-
-.slider3{
-    height: 400px;
-    width: 950px;
-    margin: auto;
-    overflow: hidden;
-    margin: 60px;
-}
-
-.slider3 ul{
-    display: flex;
-    padding: 0;
-    width: 400%;
-    animation: cambio 20s infinite alternate;
-}
-
-.slider3 li{
-    width: 100%;
-    list-style: none;
-}
-
-.slider3 img{
-    width: 100%;
-}
-
-@keyframes cambio {
-    0% {margin-left: 0; }
-    20% {margin-left: 0; }
-
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-}
-
-.btn3{
-    margin-top: 20px;
-    height: 100px;
-    width: 200px;
-    margin-left: 60px;
-    
-}
-.btn4{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:white;
+.carousel-control-next span{
     background-color:  rgb(3, 58, 131);
-    font-size: 25px;
-    border-radius: 20px;
-}
-.navbar ul li ul li{
-    display: none;
+    
+
 }
 
-.navbar ul li:hover ul li{
-    display: block;
-    transform: 0.5s;
+.aside-lanzamiento{
+    display:flex;
+    height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    width:100%;
+    justify-content: space-between;
 }
+
+.boton-foot{
+    display:flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    background-color: white;
+    font-size: 20px;
+    height: 30px;
+    width: 150px;  
+   
+}
+    
+.carousel-control-prev span{
+   margin-top: 30vh;
   
+}
+.carousel-control-next span{
+    margin-top: 30vh;
+}
+.boton-foot{
+    display:flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    background-color: white;
+    font-size: 20px;
+    height: 30px;
+    width: 150px;  
+   
+}
+
+
+
 
 /* CSS NUESTRA HISTORIA*/
-
 
 .container{
     display: flex;
