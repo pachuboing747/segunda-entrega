@@ -3,8 +3,7 @@
 
 .icono{
     width: 200px;
-    height: 100px;
-  
+    height: 100px;  
 }
 
 .navbar-nav{
@@ -116,23 +115,34 @@
 }
 
 .aside-index{
-
-    grid-area: aside;
-    margin-top: 10px;
-    width:100vw;
-
+    background-color:rgb(3, 58, 131);
+    color: white;
+    text-align: center;
 
 }
 .aside-index button{
     animation: animacion 2s linear infinite;
 }
 
-
 .footer-index{
-    grid-area: footer;
-    margin-top: 10px;
-    width:100%;
+    background-color:black
 }
+
+.copyright-leon{
+    color: white;
+    text-align: center;
+} 
+.copyright-index{
+    color: white;
+    text-align: center;
+} 
+.copyright-nosotros{
+    background-color:black;
+    color: white;
+    text-align: center;
+ 
+} 
+
 
 
 
@@ -227,15 +237,20 @@ height: 100%;
 display: flex;
 justify-content:space-around;
 
-
 }
 
 
 .aside-categoria{
 grid-area: aside;
+text-align: center;
+color: white;
+background-color:rgb(3, 58, 131);
 }
 .aside-footer{
 grid-area: footer;
+background-color:black;
+text-align: center;
+color: white;
 }
 
 .picture img{
@@ -264,10 +279,8 @@ display: flex;
 }
 .picture img:nth-child(3){
     grid-column: 5/6;
-    grid-row: 1/2;
-  
+    grid-row: 1/2; 
 }
-
 
 .btn{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -284,9 +297,11 @@ border-radius: 10px;
    color: white;
    background-color: rgb(3, 58, 131);
    object-fit: cover;
-
 }
 
+.Copyright-categoria{
+    color: white;
+} 
 
 /* CSS LANZAMIENTOS*/
 
@@ -296,8 +311,12 @@ border-radius: 10px;
     box-sizing: border-box;
     background-image: linear-gradient(white, rgb(3, 58, 131));
 }
+.main-lanzamiento{
+    justify-content: center;
+}
 .lanzamientos{
     color:  rgb(3, 58, 131);
+    justify-content: center;
 }
 
 .carousel-control-prev span{
@@ -313,15 +332,14 @@ border-radius: 10px;
     width: 100%;
     margin: 0px;
     padding: 0px;
+    justify-content: center;
 }
 .aside-lanzamiento{
-    display:flex;
-    height: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(3, 58, 131);
+    text-align: center;
     color: white;
-    font-size: 20px;
-    width:100%;
-    justify-content: space-between;
+    padding: 8px 0px 0px 0px;
+    margin: 8px 0px 0px 0px;
 }
 
 .btn-reg{
@@ -329,16 +347,28 @@ border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:  rgb(3, 58, 131);
     animation: animacion 2s linear infinite;
+    margin: 8px;
+    padding: 8px;
     
 }
-
-    
+ 
 .carousel-control-prev spa{
    margin-top: 30vh;
   
 }
 .carousel-control-next spa{
     margin-top: 30vh;
+}
+.footer-lanzamiento{
+    text-align: center; 
+    color: white;
+    background-color:black;
+    padding: 8px 0px 0px 0px;
+    margin: 8px 0px 0px 0px;
+}
+    
+.copyright-lanzamiento{
+    color: white;
 }
 
 
@@ -372,11 +402,21 @@ border-radius: 10px;
     margin: 0px 0px 0px 30px;
 
 }
+.aside-historia{
+    background-color:rgb(3, 58, 131);
+}
+.aside-nosotros{
+
+    text-align: center;
+    color: white;
+}
 
 /* CSS CONTACTOS*/
+
 .lista-social{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content:center;
 }
 .lista-social a{
     color: white;
@@ -397,6 +437,84 @@ border-radius: 10px;
     animation: animacion 2s linear infinite;
     font-size: 20px;
     
+}
+
+.formulario-uno{
+    justify-content:center;
+    flex-wrap: wrap;
+    border-style: solid;
+    margin: 10px;
+} 
+.formulario-dos{
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items:center;
+    border-style: solid;
+    margin: 10px;
+} 
+.formulario-tres{
+    justify-content:center;
+    flex-wrap: wrap;
+} 
+.formulario-cuatro{
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.form-cinco{
+    font-weight: bold;
+    flex-wrap:wrap;
+    justify-content:center;
+
+} 
+.form-seis{
+    flex-wrap:wrap;
+    justify-content:center; 
+    align-items:center;
+}
+
+.formulario-contacto{
+    text-align: center;
+    margin: 50px;
+}
+
+.aside-contacto{
+    text-align: center;
+    color: white;
+    background-color:rgb(3, 58, 131);
+}
+.footer-contacto{
+    text-align: center;
+    color: white;
+    background-color:black;
+}
+.copyright-contacto{
+    color: white;
+}
+
+
+@media(max-width:991px){
+    .main-categoria .picture{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-direction: column; 
+    }
+    .main-historia{
+    display: flex;
+    flex-direction: column; 
+    }
+}  
+@media(max-width:768px){
+    .tamaño-video{
+    width: 100px;
+    height: 100px;
+    }   
+    .video{
+    display: flex;
+    justify-content: center;
+    }
+            
 }
 
 
